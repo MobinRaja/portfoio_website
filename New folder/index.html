@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobin Raja - Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  <style>
+   
+   
+    #projects {
+        height: 100vh;
+    }
+    
+  .project-heading {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+
+  .project-name {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  #contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  .contact-container {
+    text-align: center;
+  }
+</style>
+
+   
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#" onclick="showSection('home')">Home</a></li>
+        <li><a href="#" onclick="showSection('about')">About</a></li>
+        <li><a href="#" onclick="showSection('projects')">Projects</a></li>
+        <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  
+  <section id="home">
+    <div class="container">
+      <h1 style="font-size: 48px;">Portfolio Website</h1>
+      <h2 style="font-size: 30px;">Full Stack Developer</h2>
+      <p style="font-size: 20px;">Mobin Raja</p>
+  
+     
+      <form action="save_question.php" method="POST">
+        <input type="text" name="question" placeholder="Enter your question" required>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </section>
+  
+
+
+    <section id="about" style="display: none;">
+        <h2 style="font-size: 48px;">About</h2>
+        <p style="font-size: 20px;">College: [Keystone School of engineering]</p>
+        <p style="font-size: 20px;">Course: [BE ]</p>
+        <p style="font-size: 20px;">CGPA: [9.95]</p>
+        <p style="font-size: 20px;">Interests: [DANCING]
+                      [VIDEO EDITING]
+        </p>
+
+        <!-- Insert any other additional content about yourself and your skills here -->
+      </section>
+      
+
+      <section id="projects" style="display: none;">
+        <h2 class="project-heading">Projects</h2>
+        <h3 class="project-name">1. Calculator</h3>
+        <h3 class="project-name">2. Weather Prediction</h3>
+        <h3 class="project-name">3. Portfolio Website</h3>
+        <!-- Add more project names as needed -->
+      </section>
+      
+      
+
+      <section id="contact" style="display: none;">
+        <div class="contact-container">
+          <h2>Contact</h2>
+          <p>Email-di:(mobin2002raza@gmail.com)</p>
+          <P> Linkden:(Mobin Raja)</P>
+        </div>
+      </section>
+      
+
+    <script>
+      function showSection(sectionId) {
+        const sections = document.querySelectorAll('section');
+        sections.forEach(section => {
+          if (section.id === sectionId) {
+            section.style.display = 'block';
+          } else {
+            section.style.display = 'none';
+          }
+        });
+      }
+    </script>
+  </div>
+</body>
+</html>
